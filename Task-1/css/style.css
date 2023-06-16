@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#AddTask {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+#AddTask input {
+  padding-left: 10px;
+}
+
+#Tasks {
+  width: 500px;
+}
+#Tasks .task-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=style.css.map */

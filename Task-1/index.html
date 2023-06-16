@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="AddTask" class="my-4 mx-auto px-5">
+        <input id="NewTask" class="w-75" type="text" placeholder="Add a new task" autofocus>
+        <button id="Add" class="btn btn-success">Add +</button>
+        <button id="Save" class="btn btn-success d-none">Save</button>
+    </div>
+    <div id="Tasks" class="mx-auto">
+        <div class="top"><p class="ms-5"><i>No tasks here yet</i></p></div>
+        <div class="bottom d-flex flex-column-reverse"></div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

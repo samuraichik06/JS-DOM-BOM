@@ -1,7 +1,6 @@
 let topInfo = document.querySelector("#Tasks .top p");
 let bottom = document.querySelector("#Tasks .bottom");
 let AddButton = document.getElementById("Add");
-let SaveButton = document.getElementById("Save");
 AddButton.addEventListener("click", () => {
     let NewTask = document.getElementById("NewTask").value.trim();
     if (NewTask != "") {
@@ -36,19 +35,20 @@ AddButton.addEventListener("click", () => {
         btn.addEventListener("click", () => {
             let previous = btn.parentElement.parentElement.firstElementChild.lastElementChild;
             let edit = document.getElementById("NewTask");
+            let SaveButton = document.getElementById("Save");
             edit.value = previous.innerHTML;
             AddButton.classList.add("d-none");
             SaveButton.classList.remove("d-none")
-            document.querySelector("input").placeholder = "Edit your task";;
-            SaveButton.addEventListener("click", () => {
-                if(edit.value != "") {
+            document.querySelector("input").placeholder = "Edit your task";
+            SaveButton.onclick = () => {
+                if(edit.value != "" && edit.value != previous.innerHTML) {
                     previous.innerHTML = edit.value;
                 }
                 edit.value = "";
                 AddButton.classList.remove("d-none");
                 SaveButton.classList.add("d-none");
                 document.querySelector("input").placeholder = "Add a new task";
-            })
+            }
         })
     }
     let DeleteButtons = document.querySelectorAll(".btn-danger");
